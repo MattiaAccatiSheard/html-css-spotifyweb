@@ -1,60 +1,139 @@
 :root{
-    --footer-height: 100px;
+    --footer-height: 80px;
+    --header-height: 80px;
+    --sidebar-width: 250px;
 }
 
 body{
    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
 }
 .wrapper{
     height: 100vh;
-    width: 100vw;
-}
-
-.top-content{
-    
-}
-
-.sidebar{
-    width: 250px;
-    height: calc(100vh - 5rem);
-    background-color: #000000;
-    
-
-}
-
-.content{
     width: 100%;
+}
+
+/**********************
+TOP-CONTENT
+**********************/
+.top-content{
+    display: flex;
+    height: calc(100vh - var(--footer-height));
+}
+
+/**********************
+SIDEBAR
+**********************/
+.sidebar{
+    width: var(--sidebar-width);
+    background-color: #000000;    
+    /* height: calc(100vh - ); */
+}
+
+.sidebar-container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.side-logo{
+    background-size: 10px 20px;
+}
+
+
+.button-menu{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.m-button{
+    display: flex;
+}
+
+.m-button-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.playlist-menu{
+
+}
+
+.user-menu{
+}
+
+hr{
+    width: 200px;
+}
+
+
+/**********************
+CONTENT
+**********************/
+.content{
+    width: calc(100% - var(--sidebar-width));
+ 
     /* padding-top: 100px; */
 } 
 
+/**********************
+HEADER
+**********************/
 header{
-    display: flex;
+    position: fixed;
+
+    height: var(--header-height);
+    width: 100%;
+
+    background-color: #000000;
+    opacity: .6;
+    line-height: var(--header-height);
+
+    /* display: flex;
     flex-direction: row;
     position: fixed;
     width: calc(100% - 250px);
-    height: 5rem;
+    height: var(--header-height);
     background-color: black;
     opacity: .6;   
-    line-height: 5rem; 
+    line-height: 5rem;  */
 }
 
 
 .header-button{
-    position: absolute;
-    right: 5px;
-
+    
+    /* position: absolute;
+    right: 5px; */
 
 }
 
+.upgrade-button{
+    background-color: #000000;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+/**********************
+MAIN
+**********************/
 main{
-    height: calc(100vh - 5rem);
+    height: 100%;
     background-color: #141922;
+    padding-top: var(--header-height);
+    
     overflow: auto;
-    color: aliceblue;
 }
 
+/**********************
+FOOTER
+**********************/
 .footer{
-    height: 5rem;
+    height: var(--footer-height);
     background-color: #282828;
 } 
+
+
+
 
