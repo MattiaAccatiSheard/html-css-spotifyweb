@@ -150,6 +150,31 @@ main{
     overflow: auto;
 }
 
+.main-menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    margin: 30px 50px;
+}
+
+li{
+    list-style: none;
+}
+
+.playlist-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* debug */
+    width: 200px;
+}
+
+
+
 /**********************
 FOOTER
 **********************/
@@ -169,8 +194,8 @@ FOOTER
     align-items: center;
 }
 
-.cur-artwork{
-    background-size: cover;
+.img-cur-artwork{
+    height: calc( var(--footer-height) - 25px);
 }
 
 .cur-names{
